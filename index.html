@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Quantum Networks</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./app.js"></script>
+  </head>
+  <body>
+    <div class="container">
+  <div class="row">
+
+    <div class="col-lg-6">
+      <h1>Saved Searches</h1>
+      <p>rendering of content inside a MySQL database</p>
+      <p>Table with headings:</p>
+      <ul>
+        <li>ASIN</li>
+        <li>Title</li>
+        <li>MPN</li>
+        <li>Price</li>
+      </ul>
+    </div>
+
+    <div class="col-lg-6">
+      <h1>Search Amazon</h1>
+
+      <input type="text" class="form-control" name="id" placeholder="ASIN">
+      <button class="btn btn-primary" onClick="searchAmazon('B00W2KG92Y')">Search</button>
+
+      <div id="results">
+        <p><strong>ASIN:</strong><span class="asin"></span></p>
+        <p><strong>Title:</strong><span class="title"></span></p>
+        <p><strong>MPN:</strong><span class="mpn"></span></p>
+        <p><strong>Price:</strong><span class="price"></span></p>
+        <button class="btn btn-success" onClick="searchAmazon('B00W2KG92Y')">Add to Database</button>
+      </div>
+      <p>Should be an additional button under response that will insert values into DB</p>
+
+    </div>
+
+  </div>
+</div>
+  </body>
+</html>
