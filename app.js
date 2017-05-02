@@ -39,5 +39,14 @@ function working(info) {
 }
 
 function showDatabase() {
+  $.ajax({
+      method: "GET",
+      url: 'http://localhost:8000/show.php'
+    }).done(function(dbresults) {
+      renderTable(dbresults)
+    })
+}
+
+function renderTable(dbresults) {
   
 }
