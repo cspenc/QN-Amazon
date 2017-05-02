@@ -1,5 +1,5 @@
 <?php
-$servername = "localhost"; //localhost
+$servername = "mysql://b35c538d4e254d:96e2da7c@us-cdbr-iron-east-03.cleardb.net/heroku_ccc095e992c1aba?reconnect=true"; //localhost
 $username = "	b35c538d4e254d";
 $password = "96e2da7c";
 
