@@ -12,10 +12,10 @@ function searchAmazon(id) {
 }
 
 function showResults(data) {
-  $('.asin').html(` ${data.ASIN}`);
-  $('.title').html(` ${data.Title}`);
-  $('.mpn').html(` ${data.MPN}`);
-  $('.price').html(` ${data.Price}`);
+  $('.asin').html(`${data.ASIN}`);
+  $('.title').html(`${data.Title}`);
+  $('.mpn').html(`${data.MPN}`);
+  $('.price').html(`${data.Price}`);
   $('.add').html(`<button class="btn btn-success" onClick="addToDB()">Add to Database</button>`);
 }
 
@@ -47,10 +47,6 @@ function showDatabase() {
       method: "GET",
       url: 'http://localhost:8000/show.php'
     }).done(function(dbresults) {
-      renderTable(dbresults)
+      $('.table-results').html(dbresults);
     })
-}
-
-function renderTable(dbresults) {
-  $('.divy').html(dbresults);
 }

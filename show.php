@@ -22,8 +22,7 @@ if ($result->num_rows > 0) {
       $mpn = $row["mpn"];
       $price = $row["price"];
 
-      echo "asin: $asin, title: $title, mpn: $mpn, price: $price";
-        // echo "asin" . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+      echo "<tr><td>$asin</td><td>$title</td><td>$mpn</td><td>$price</td></tr>";
     }
 }
 $conn->close();

@@ -14,30 +14,38 @@
 
     <div class="col-lg-6">
       <h1>Saved Searches</h1>
-      <p>rendering of content inside a MySQL database</p>
-      <p>Table with headings:</p>
-      <ul>
-        <li>ASIN</li>
-        <li>Title</li>
-        <li>MPN</li>
-        <li>Price</li>
-      </ul>
-      <div class="divy">
-
+      <div class="results">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>ASIN</th>
+              <th>Title</th>
+              <th>MPN</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody class="table-results">
+            <!-- results show here -->
+          </tbody>
+        </table>
       </div>
     </div>
 
     <div class="col-lg-6">
       <h1>Search Amazon</h1>
 
-      <input type="text" class="form-control" name="id" placeholder="ASIN">
-      <button class="btn btn-primary" onClick="searchAmazon('B00W2KG92Y')">Search</button>
+      <div class="input-group">
+        <input type="text" class="form-control" name="id" placeholder="Search by ASIN">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button" onClick="searchAmazon('B00W2KG92Y')">Search Amazon!</button>
+        </span>
+      </div>
 
       <div id="results">
-        <p><strong>ASIN:</strong><span class="asin"></span></p>
-        <p><strong>Title:</strong><span class="title"></span></p>
-        <p><strong>MPN:</strong><span class="mpn"></span></p>
-        <p><strong>Price:</strong><span class="price"></span></p>
+        <p><strong>ASIN:</strong> <span class="asin"></span></p>
+        <p><strong>Title:</strong> <span class="title"></span></p>
+        <p><strong>MPN:</strong> <span class="mpn"></span></p>
+        <p><strong>Price:</strong> <span class="price"></span></p>
         <p><span class="add"></span></p>
       </div>
 
