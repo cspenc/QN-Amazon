@@ -2,10 +2,11 @@ $(document).ready(function() {
   showDatabase();
 });
 
-function searchAmazon(id) {
+function searchAmazon() {
+  var term = document.getElementById("search").value;
   $.ajax({
       method: "GET",
-      url: `http://localhost:8000/request.php?item_id=${id}`
+      url: `http://localhost:8000/request.php?item_id=${term}`
     }).done(function(data) {
       showResults(data);
     })
@@ -32,14 +33,8 @@ function addToDB() {
       url: 'http://localhost:8000/save.php',
       data: {asin: data1, title: data2, mpn: data3, price: data4}
     }).done(function(info) {
-      working(info);
       showDatabase();
     })
-
-}
-
-function working(info) {
-  console.log(info);
 }
 
 function showDatabase() {
