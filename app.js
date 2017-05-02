@@ -1,5 +1,5 @@
 function searchAmazon(id) {
-  return $.ajax({
+  $.ajax({
       method: "GET",
       url: `http://localhost:8000/request.php?item_id=${id}`
     }).done(function(data) {
@@ -16,11 +16,23 @@ function showResults(data) {
 }
 
 function addToDB() {
-  var asin = $('.asin').html();
-  var title = $('.title').html();
-  var mpn = $('.mpn').html();
-  var price = $('.price').html();
+  var data1 = $('.asin').html();
+  var data2 = $('.title').html();
+  var data3 = $('.mpn').html();
+  var data4 = $('.price').html();
 
   //this is where the stuff gets added to the DB
 
+  $.ajax({
+      method: "POST",
+      url: 'http://localhost:8000/save.php',
+      data: {asin: data1, title: data2, mpn: data3, price: data4}
+    }).done(function(getitback) {
+      test(getitback);
+    })
+
+}
+
+function test(lol) {
+  console.log(lol);
 }
