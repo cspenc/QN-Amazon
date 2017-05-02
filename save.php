@@ -5,9 +5,9 @@ $title = $_POST['title'];
 $mpn = $_POST['mpn'];
 $price = $_POST['price'];
 
-$servername = "127.0.0.1"; //localhost
-$username = "root";
-$password = "mason123";
+$servername = "localhost"; //localhost
+$username = "	b35c538d4e254d";
+$password = "96e2da7c";
 $dbname = "AMZN";
 
 // Create connection
