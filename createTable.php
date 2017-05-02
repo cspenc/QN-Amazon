@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost"; //localhost
-$username = "	b35c538d4e254d";
+$servername = "us-cdbr-iron-east-03.cleardb.net/heroku_ccc095e992c1aba?reconnect=true"; //localhost
+$username = "b35c538d4e254d";
 $password = "96e2da7c";
-$dbname = "AMZN";
+$dbname = "heroku_ccc095e992c1aba";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
