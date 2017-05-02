@@ -1,5 +1,5 @@
 <?php
-$servername = "us-cdbr-iron-east-03.cleardb.net/heroku_ccc095e992c1aba?reconnect=true"; //localhost
+$servername = "us-cdbr-iron-east-03.cleardb.net";
 $username = "b35c538d4e254d";
 $password = "96e2da7c";
 $dbname = "heroku_ccc095e992c1aba";

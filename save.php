@@ -5,10 +5,10 @@ $title = $_POST['title'];
 $mpn = $_POST['mpn'];
 $price = $_POST['price'];
 
-$servername = "localhost"; //localhost
-$username = "	b35c538d4e254d";
+$servername = "us-cdbr-iron-east-03.cleardb.net";
+$username = "b35c538d4e254d";
 $password = "96e2da7c";
-$dbname = "AMZN";
+$dbname = "heroku_ccc095e992c1aba";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
