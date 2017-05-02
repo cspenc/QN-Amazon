@@ -27,12 +27,17 @@ function addToDB() {
       method: "POST",
       url: 'http://localhost:8000/save.php',
       data: {asin: data1, title: data2, mpn: data3, price: data4}
-    }).done(function(getitback) {
-      test(getitback);
+    }).done(function(info) {
+      working(info);
+      showDatabase();
     })
 
 }
 
-function test(lol) {
-  console.log(lol);
+function working(info) {
+  console.log(info);
+}
+
+function showDatabase() {
+  
 }

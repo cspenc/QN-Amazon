@@ -17,8 +17,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO Saved (firstname, lastname, email)
-VALUES ('John', 'Doe', 'john@example.com')";
+$sql = "INSERT INTO Saved (asin, title, mpn, price)
+VALUES ('$asin', '$title', '$mpn', '$price')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
