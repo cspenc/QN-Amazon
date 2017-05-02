@@ -6,7 +6,7 @@ function searchAmazon() {
   var term = document.getElementById("search").value;
   $.ajax({
       method: "GET",
-      url: `http://localhost:8000/request.php?item_id=${term}`
+      url: `request.php?item_id=${term}`
     }).done(function(data) {
       showResults(data);
     })
