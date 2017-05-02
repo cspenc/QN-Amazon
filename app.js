@@ -6,7 +6,7 @@ function searchAmazon() {
   var term = document.getElementById("search").value;
   $.ajax({
       method: "GET",
-      url: `request.php?item_id=${term}`
+      url: `./request.php?item_id=${term}`
     }).done(function(data) {
       showResults(data);
     })
@@ -30,7 +30,7 @@ function addToDB() {
 
   $.ajax({
       method: "POST",
-      url: 'http://localhost:8000/save.php',
+      url: './save.php',
       data: {asin: data1, title: data2, mpn: data3, price: data4}
     }).done(function(info) {
       showDatabase();
@@ -40,7 +40,7 @@ function addToDB() {
 function showDatabase() {
   $.ajax({
       method: "GET",
-      url: 'http://localhost:8000/show.php'
+      url: './show.php'
     }).done(function(dbresults) {
       $('.table-results').html(dbresults);
     })
