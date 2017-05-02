@@ -1,3 +1,7 @@
+$(document).ready(function() {
+  showDatabase();
+});
+
 function searchAmazon(id) {
   $.ajax({
       method: "GET",
@@ -48,5 +52,5 @@ function showDatabase() {
 }
 
 function renderTable(dbresults) {
-  
+  $('.divy').html(dbresults);
 }
